@@ -15,7 +15,6 @@ import ecole.ensa.etudiant.model.Etudiant;
 
 @WebServlet("/EtudiantServlet")
 public class EtudiantServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
 	
     public EtudiantServlet() {
         super();
@@ -28,7 +27,6 @@ public class EtudiantServlet extends HttpServlet {
 			Etudiant model = metier.searchEtudiantByCin(cin);
 			request.setAttribute("MonEtudiant", model);
 		} catch (NotBoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		request.getRequestDispatcher("/vues/etudiantVue.jsp").forward(request, response);

@@ -6,4 +6,5 @@ import java.rmi.RemoteException;
 
 public interface IEtudiantMetier extends Remote {
 	Etudiant searchEtudiantByCin(String cin) throws RemoteException;
+	// change for githuuub
 }
